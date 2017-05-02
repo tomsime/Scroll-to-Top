@@ -12,6 +12,7 @@ jQuery plugin to display a button for scrolling the page to the top.
 - bottom: (string) Bottom position. Use px, em or rem mesure unit.
 - right: (string) Right position. Use px, em or rem mesure unit.
 - windowScrollShow: (integer) Window height after which show the button.
+- speed: (integer) Scrolling speed
 - customHtml: (string) Set custom html for icon
 - mobileOnly: (bool) Show button only on mobile device
 
