@@ -1,4 +1,4 @@
-# Scroll the page to top
+# Scroll to top of web page
 
 jQuery plugin to display a button for scrolling the page to the top.
 
@@ -16,11 +16,9 @@ jQuery plugin to display a button for scrolling the page to the top.
 - customHtml: (string) Set custom html for icon
 - mobileOnly: (bool) Show button only on mobile device
 
-
-
 #### Default option
 
-```
+```javascript
    var defaults = {
     background : '#000',
     color: '#fff',
@@ -36,16 +34,35 @@ jQuery plugin to display a button for scrolling the page to the top.
 }
 ```
 
-### Examples
+### How to use
 
-```
-$('#goup').gotop({
-  background: '#ee7601',
-  customHtml: '<i class="fa fa-angle-up"></i>',
-  bottom: '5px',
-  right: '5px',
-  mobileOnly: true
-});
-```
+1. Include necessary JS files
 
-Change the default options for background, color, position and to show the botton only on mobile device.
+   ```html
+   <script src="js/jquery.js"></script>
+   <script src="js/jquery.gotop.js"></script>
+   ```
+
+2. Create a link element in your body
+
+   ```html
+   <div id="gotop"></div>
+   ```
+
+3. Fire plugin using jQuery selector
+
+   ```javascript
+   (function ($) {
+     $('#gotop').gotop({});
+   }(jQuery));
+   ```
+
+4. Change default options
+
+   ```javascript
+   $('#goup').gotop({
+     customHtml: '<i class="fa fa-angle-up"></i>',
+     bottom: '5px',
+     right: '5px'
+   });
+   ```
