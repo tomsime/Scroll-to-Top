@@ -30,6 +30,7 @@ jQuery plugin to display a button for scrolling the page to the top.
     bottom : '25px',
     right : '25px',
     windowScrollShow: 400,
+    speed: 800,
     customHtml: '',
     mobileOnly: false
 }
