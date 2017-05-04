@@ -1,7 +1,7 @@
 /**
- * jQuery Plugin to show up the button which scroll the page up to top.
+ * jQuery plugin to display a button for scrolling the page to the top.
  * @author	Tommaso Simeone
- * @link https://github.com/tomaggio83/scroll-top-page
+ * @link https://github.com/tomaggio83/Scroll-to-Top
  * @version 1.0
  *
  * This program is free software: you can redistribute it and/or modify
