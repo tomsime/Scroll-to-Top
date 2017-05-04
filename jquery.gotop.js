@@ -1,5 +1,5 @@
 /**
- * jQuery plugin to display a button for scrolling the page to the top.
+ * jQuery Plugin to show up the button which scroll the page up to top.
  * @author	Tommaso Simeone
  * @link https://github.com/tomaggio83/Scroll-to-Top
  * @version 1.0
@@ -24,7 +24,6 @@
 (function($){
     'use strict';
     
-    
     var defaults = {
         background : '#000', // Background color
         color: '#fff', // Icon color
@@ -38,6 +37,8 @@
         customHtml: '', // Set custom html for icon
         mobileOnly: false // Show button only on mobile device
     }
+    
+    // ----------------------------------
     
     $.fn.gotop = function( options ){
         
@@ -83,30 +84,35 @@
             }
 
             // ----------------------------------
-
-
-            // // Show the scroll to top button
-            if (opts.mobileOnly == false) 
-            {
-                $(window).scroll(function() {
-                    $.fn.gotop.showButton($el, opts.windowScrollShow);
-               });
-            } 
-            // Show the scroll to top button only on mobile device
-            else if (opts.mobileOnly == isMobile) 
-            {
-                $(window).scroll(function() {
-                    $.fn.gotop.showButton($el, opts.windowScrollShow);
-                });
-            }
-
-            // ----------------------------------
-
+            
             // Back to top
             $el.click(function (e) {
               e.preventDefault();
               $('html, body').animate({scrollTop: 0}, opts.speed);
+            });
+            
+            // ----------------------------------
+            
+            // Show the scroll to top button only on mobile devices
+            if (opts.mobileOnly == true) {
+                if(isMobile) {
+                    $(window).scroll(function() {
+                        $.fn.gotop.showButton($el, opts.windowScrollShow);
+                    });                    
+                } else {
+                    return false;
+                }
+            }
+            
+            // ----------------------------------
+            
+            // Show the scroll to top button on all devices
+            $(window).scroll(function() {
+                $.fn.gotop.showButton($el, opts.windowScrollShow);
             }); 
+            
+            // ----------------------------------
+            
         });
     };
     
@@ -116,7 +122,10 @@
         return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent); 
     }
     
+    // --------------------------------------------------------------------------
+    
     $.fn.gotop.showButton = function(element, windowScrollHeight) {
+        
         if( $(window).scrollTop() > windowScrollHeight ) {
             element.fadeIn(400)
                 .css('display', 'flex');
@@ -124,5 +133,7 @@
             element.fadeOut(400);
         }
     }
+    
+    // --------------------------------------------------------------------------
     
 }(jQuery));
