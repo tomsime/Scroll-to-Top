@@ -53,7 +53,7 @@ jQuery plugin to display a button for scrolling the page to the top.
 
    ```javascript
    (function ($) {
-     $('#gotop').gotop({});
+     $('#gotop').gotop();
    }(jQuery));
    ```
 
