@@ -60,7 +60,7 @@ jQuery plugin to display a button for scrolling the page to the top.
 4. Change default options
 
    ```javascript
-   $('#goup').gotop({
+   $('#gotop').gotop({
      customHtml: '<i class="fa fa-angle-up"></i>',
      bottom: '5px',
      right: '5px'
