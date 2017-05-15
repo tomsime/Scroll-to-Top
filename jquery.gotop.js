@@ -103,13 +103,13 @@
                     return false;
                 }
             }
-            
-            // ----------------------------------
-            
-            // Show the scroll to top button on all devices
-            $(window).scroll(function() {
-                $.fn.gotop.showButton($el, opts.windowScrollShow);
-            }); 
+            else
+            {
+                // Show the scroll to top button on all devices
+                $(window).scroll(function() {
+                    $.fn.gotop.showButton($el, opts.windowScrollShow);
+                }); 
+            }            
             
             // ----------------------------------
             
